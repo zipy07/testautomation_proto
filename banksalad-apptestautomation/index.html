@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="ko-KR">
+
+<!-- Mirrored from fxtradeonline.net/banksalad-apptestautomation/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Jan 2021 16:09:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10.0, user-scalable=yes">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<title>Test Setup</title>
+<script>window._wca = window._wca || [];</script>
+<link rel='dns-prefetch' href='http://developers.kakao.com/' />
+<link rel='dns-prefetch' href='http://stats.wp.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel='dns-prefetch' href='http://v0.wordpress.com/' />
+<link rel='dns-prefetch' href='http://i0.wp.com/' />
+<link rel='dns-prefetch' href='http://i1.wp.com/' />
+<link rel='dns-prefetch' href='http://i2.wp.com/' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; 피드" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; 댓글 피드" href="../comments/feed/index.html" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.12.3 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+<!-- No UA code set -->
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/fxtradeonline.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='user-registration-general-css'  href='../wp-content/plugins/user-registration/assets/css/user-registration3cf4.css?ver=1.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='user-registration-smallscreen-css'  href='../wp-content/plugins/user-registration/assets/css/user-registration-smallscreen3cf4.css?ver=1.8.8' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='user-registration-my-account-layout-css'  href='../wp-content/plugins/user-registration/assets/css/my-account-layout3cf4.css?ver=1.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sweetalert2-css'  href='../wp-content/plugins/user-registration/assets/css/sweetalert2/sweetalert2.min782a.css?ver=8.17.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='../wp-includes/css/dashicons.min40df.css?ver=5.6' type='text/css' media='all' />
+<style id='dashicons-inline-css' type='text/css'>
+[data-font="Dashicons"]:before {font-family: 'Dashicons' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+</style>
+<link rel='stylesheet' id='wp-block-library-css'  href='../wp-includes/css/dist/block-library/style.min40df.css?ver=5.6' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='wc-block-vendors-style-css'  href='../wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/vendors-style6b00.css?ver=3.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wc-block-style-css'  href='../wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/style6b00.css?ver=3.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='../wp-content/themes/customify/assets/css/compatibility/woocommerce.min1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='../wp-content/themes/customify/assets/css/compatibility/woocommerce-smallscreen.min1c9b.css?ver=4.6.1' type='text/css' media='only screen and (max-width: 768px)' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='kakao-plusfriend-style-css'  href='../wp-content/plugins/wp-kakao-plusfriend/assets/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='hfe-style-css'  href='../wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementore225.css?ver=1.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='../wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min74e5.css?ver=5.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='../wp-content/plugins/elementor/assets/lib/animations/animations.mine9bd.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-legacy-css'  href='../wp-content/plugins/elementor/assets/css/frontend-legacy.mine9bd.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='../wp-content/plugins/elementor/assets/css/frontend.mine9bd.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1156-css'  href='../wp-content/uploads/elementor/css/post-1156017e.css?ver=1604333434' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/all.mine9bd.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.mine9bd.css?ver=3.0.12' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-1893-css'  href='../wp-content/uploads/elementor/css/post-1893122e.css?ver=1605395636' type='text/css' media='all' />
+<link rel='stylesheet' id='hfe-widgets-style-css'  href='../wp-content/plugins/header-footer-elementor/inc/widgets-css/frontende225.css?ver=1.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='yith_wcbsl_frontend_style-css'  href='../wp-content/plugins/yith-woocommerce-best-sellers/assets/css/frontend2503.css?ver=1.1.23' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min1849.css?ver=4.7.0' type='text/css' media='all' />
+<style id='font-awesome-inline-css' type='text/css'>
+[data-font="FontAwesome"]:before {font-family: 'FontAwesome' !important;content: attr(data-icon) !important;speak: none !important;font-weight: normal !important;font-variant: normal !important;text-transform: none !important;line-height: 1 !important;font-style: normal !important;-webkit-font-smoothing: antialiased !important;-moz-osx-font-smoothing: grayscale !important;}
+</style>
+<link rel='stylesheet' id='customify-style-css'  href='../wp-content/themes/customify/style.min70a1.css?ver=0.3.5' type='text/css' media='all' />
+<style id='customify-style-inline-css' type='text/css'>
+.customify-container, .layout-contained, .site-framed .site, .site-boxed .site { max-width: 1200px; } .main-layout-content .entry-content > .alignwide { width: calc( 1200px - 4em ); max-width: 100vw;  }#page-cover {-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;}#page-cover {background-repeat: repeat;}.sub-menu .li-duplicator {display:none !important;}.header-search_icon-item .header-search-modal  {border-style: solid;} .header-search_icon-item .search-field  {border-style: solid;} .dark-mode .header-search_box-item .search-form-fields, .header-search_box-item .search-form-fields  {border-style: solid;} .builder-item--primary-menu .nav-icon-angle { width: 10px; height: 10px; }a.item--button {letter-spacing: 3px;}a.item--button  {color: #000000; text-decoration-color: #000000;background-color: rgba(0,0,0,0);} a.item--button:hover  {color: #0066bf; text-decoration-color: #0066bf;} .site-content .content-area  {background-color: #FFFFFF;} /* CSS for desktop */#page-cover {text-align: center;}#page-cover .page-cover-inner {min-height: 300px;}#page-titlebar {text-align: center;}.header--row.header-top .customify-grid, .header--row.header-top .style-full-height .primary-menu-ul > li > a {min-height: 0px;}.header--row.header-main .customify-grid, .header--row.header-main .style-full-height .primary-menu-ul > li > a {min-height: 90px;}.header--row.header-bottom .customify-grid, .header--row.header-bottom .style-full-height .primary-menu-ul > li > a {min-height: 55px;}.header-menu-sidebar-inner {text-align: center;}.header--row .builder-first--nav-icon {text-align: right;}.header-search_icon-item .search-submit {margin-left: -40px;}.header-search_box-item .search-submit{margin-left: -40px;} .header-search_box-item .woo_bootster_search .search-submit{margin-left: -40px;} .header-search_box-item .header-search-form button.search-submit{margin-left:-40px;}.header--row .builder-first--primary-menu {text-align: right;}.wc-grid-view .wc-product-contents {text-align: center;}.wc-list-view .wc-product-contents {text-align: center;}/* CSS for tablet */@media screen and (max-width: 1024px) { #page-cover .page-cover-inner {min-height: 250px;}.header--row.header-bottom .customify-grid, .header--row.header-bottom .style-full-height .primary-menu-ul > li > a {min-height: 0px;}.header--row .builder-first--nav-icon {text-align: right;}.header-search_icon-item .search-submit {margin-left: -40px;}.header-search_box-item .search-submit{margin-left: -40px;} .header-search_box-item .woo_bootster_search .search-submit{margin-left: -40px;} .header-search_box-item .header-search-form button.search-submit{margin-left:-40px;}.woocommerce-listing.wc-list-view .product.customify-col:not(.product-category) .wc-product-inner .wc-product-media { flex-basis: 0%; } .woocommerce-listing.wc-list-view .product.customify-col:not(.product-category) .wc-product-inner .wc-product-contents{ flex-basis: calc(100% - 0%); } }/* CSS for mobile */@media screen and (max-width: 568px) { #page-cover .page-cover-inner {min-height: 200px;}.header--row.header-bottom .customify-grid, .header--row.header-bottom .style-full-height .primary-menu-ul > li > a {min-height: 0px;}.header--row .builder-first--nav-icon {text-align: right;}.header-search_icon-item .search-submit {margin-left: -40px;}.header-search_box-item .search-submit{margin-left: -40px;} .header-search_box-item .woo_bootster_search .search-submit{margin-left: -40px;} .header-search_box-item .header-search-form button.search-submit{margin-left:-40px;}.woocommerce-listing.wc-list-view .product.customify-col:not(.product-category) .wc-product-inner .wc-product-media { flex-basis: 0%; } .woocommerce-listing.wc-list-view .product.customify-col:not(.product-category) .wc-product-inner .wc-product-contents{ flex-basis: calc(100% - 0%); }.wc-grid-view .wc-product-contents {text-align: center;}.wc-list-view .wc-product-contents {text-align: center;} }
+</style>
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.6' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='../wp-content/plugins/jetpack/css/jetpack9e2b.css?ver=9.0.2' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.min9d52.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.mind617.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='../../developers.kakao.com/sdk/js/kakao.min40df.js?ver=5.6' id='kakao-js-sdk-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.mine9bd.js?ver=3.0.12' id='font-awesome-4-shim-js'></script>
+<script async defer type='text/javascript' src='../../stats.wp.com/s-202101.js' id='woocommerce-analytics-js'></script>
+<link rel="https://api.w.org/" href="../wp-json/index.html" /><link rel="alternate" type="application/json" href="../wp-json/wp/v2/pages/1893.json" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6" />
+<meta name="generator" content="WooCommerce 4.6.1" />
+<link rel="canonical" href="index.html" />
+<link rel='shortlink' href='https://wp.me/Pcenk9-ux' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embedb59f.json?url=https%3A%2F%2Ffxtradeonline.net%2Fbanksalad-apptestautomation%2F" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embedd792?url=https%3A%2F%2Ffxtradeonline.net%2Fbanksalad-apptestautomation%2F&amp;format=xml" />
+<style type='text/css'>img#wpstats{display:none}</style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Test Setup" />
+<meta property="og:url" content="https://fxtradeonline.net/banksalad-apptestautomation/" />
+<meta property="og:description" content="APP API RUN {{단말명}} 진행사항 테스트 진행률 64% Pass 성공 50% Fail 실패 14% Test Results Failure Test Results {{../pytest.xml}}&lt;#.SynopsisActivate a Python virtual environment for the current Powershell sessio…" />
+<meta property="article:published_time" content="2020-11-02T02:37:11+00:00" />
+<meta property="article:modified_time" content="2020-11-12T04:51:44+00:00" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:text:title" content="Test Setup" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+</head>
+
+<body class="page-template-default page page-id-1893 wp-custom-logo theme-customify user-registration-page woocommerce-no-js ehf-template-customify ehf-stylesheet-customify content main-layout-content sidebar_vertical_border site-boxed menu_sidebar_slide_left woocommerce later-wc-version elementor-default elementor-kit-1156 elementor-page elementor-page-1893">
+<div id="page" class="site box-shadow">
+	<a class="skip-link screen-reader-text" href="#site-content">콘텐츠로 바로가기</a>
+	<a class="close is-size-medium  close-panel close-sidebar-panel" href="#">
+        <span class="hamburger hamburger--squeeze is-active">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"><span class="screen-reader-text">메뉴</span></span>
+            </span>
+        </span>
+        <span class="screen-reader-text">닫기</span>
+        </a><header id="masthead" class="site-header header-v2"><div id="masthead-inner" class="site-header-inner">							<div  class="header-top header--row"  id="cb-row--header-top"  data-row-id="top"  data-show-on="desktop">
+								<div class="header--row-inner header-top-inner">
+									<div class="customify-container">
+										<div class="customify-grid  cb-row--desktop hide-on-mobile hide-on-tablet customify-grid-middle"><div class="row-v2 row-v2-top no-left no-right"><div class="col-v2 col-v2-left"></div><div class="col-v2 col-v2-center"><div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo" >		<div class="site-branding logo-bottom">
+						<a href="../index.html" class="logo-link" rel="home" itemprop="url">
+				<img class="site-img-logo" src="../../i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/cropped-%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-09-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.08.0426a3.png?fit=68%2C68&amp;ssl=1" alt="">
+							</a>
+			<div class="site-name-desc">						<p class="site-title">
+							<a href="../index.html" rel="home"></a>
+						</p>
+						</div>		</div><!-- .site-branding -->
+		</div></div><div class="col-v2 col-v2-right"></div></div></div>									</div>
+								</div>
+							</div>
+														<div  class="header-main header--row layout-full-contained"  id="cb-row--header-main"  data-row-id="main"  data-show-on="desktop mobile">
+								<div class="header--row-inner header-main-inner light-mode">
+									<div class="customify-container">
+										<div class="customify-grid  cb-row--desktop hide-on-mobile hide-on-tablet customify-grid-middle"><div class="row-v2 row-v2-main full-cols"><div class="col-v2 col-v2-left"><div class="item--inner builder-item--nav-icon" data-section="header_menu_icon" data-item-id="nav-icon" >		<a class="menu-mobile-toggle item-button is-size-desktop-medium is-size-tablet-medium is-size-mobile-medium">
+			<span class="hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</span>
+			<span class="nav-icon--label hide-on-desktop hide-on-tablet hide-on-mobile">메뉴</span></a>
+		</div></div><div class="col-v2 col-v2-center"><div class="item--inner builder-item--primary-menu has_menu" data-section="header_menu_primary" data-item-id="primary-menu" ><nav  id="site-navigation-main-desktop" class="site-navigation primary-menu primary-menu-main nav-menu-desktop primary-menu-desktop style-border-bottom hide-arrow-active"><ul id="menu-bsq" class="primary-menu-ul menu nav-menu"><li id="menu-item--main-desktop-2107" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1893 current_page_item menu-item-2107"><a href="index.html" aria-current="page"><span class="link-before">Test Setup</span></a></li>
+<li id="menu-item--main-desktop-2108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2108"><a href="../test-sts/index.html"><span class="link-before">Test Statistics</span></a></li>
+</ul></nav></div></div><div class="col-v2 col-v2-right"><div class="item--inner builder-item--search_icon" data-section="search_icon" data-item-id="search_icon" ><div class="header-search_icon-item item--search_icon">		<a class="search-icon" href="#">
+			<span class="ic-search">
+				<svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+					<path fill="currentColor" fill-rule="evenodd" d="M12.514 14.906a8.264 8.264 0 0 1-4.322 1.21C3.668 16.116 0 12.513 0 8.07 0 3.626 3.668.023 8.192.023c4.525 0 8.193 3.603 8.193 8.047 0 2.033-.769 3.89-2.035 5.307l4.999 5.552-1.775 1.597-5.06-5.62zm-4.322-.843c3.37 0 6.102-2.684 6.102-5.993 0-3.31-2.732-5.994-6.102-5.994S2.09 4.76 2.09 8.07c0 3.31 2.732 5.993 6.102 5.993z"></path>
+				</svg>
+			</span>
+			<span class="ic-close">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" fill="currentColor" style="enable-background:new 0 0 612 612;" xml:space="preserve"><g><g id="cross"><g><polygon points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397 306,341.411 576.521,611.397 612,575.997 341.459,306.011 " /></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+			</span>
+			<span class="arrow-down"></span>
+		</a>
+		<div class="header-search-modal-wrapper">
+			<form role="search" class="header-search-modal header-search-form" action="https://fxtradeonline.net/">
+				<label>
+					<span class="screen-reader-text">검색 :</span>
+					<input type="search" class="search-field" placeholder="검색 ..." value="" name="s" title="검색 :" />
+				</label>
+				<button type="submit" class="search-submit">
+					<svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+						<path fill="currentColor" fill-rule="evenodd" d="M12.514 14.906a8.264 8.264 0 0 1-4.322 1.21C3.668 16.116 0 12.513 0 8.07 0 3.626 3.668.023 8.192.023c4.525 0 8.193 3.603 8.193 8.047 0 2.033-.769 3.89-2.035 5.307l4.999 5.552-1.775 1.597-5.06-5.62zm-4.322-.843c3.37 0 6.102-2.684 6.102-5.993 0-3.31-2.732-5.994-6.102-5.994S2.09 4.76 2.09 8.07c0 3.31 2.732 5.993 6.102 5.993z"></path>
+					</svg>
+				</button>
+			</form>
+		</div>
+		</div></div><div class="item--inner builder-item--button" data-section="header_button" data-item-id="button" ><a href="../my-account/index.html" class="item--button customify-btn customify-builder-btn is-icon-after">    <i class="fa fa-user"></i> </a></div></div></div></div><div class="cb-row--mobile hide-on-desktop customify-grid customify-grid-middle"><div class="row-v2 row-v2-main full-cols"><div class="col-v2 col-v2-left"><div class="item--inner builder-item--nav-icon" data-section="header_menu_icon" data-item-id="nav-icon" >		<a class="menu-mobile-toggle item-button is-size-desktop-medium is-size-tablet-medium is-size-mobile-medium">
+			<span class="hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</span>
+			<span class="nav-icon--label hide-on-desktop hide-on-tablet hide-on-mobile">메뉴</span></a>
+		</div></div><div class="col-v2 col-v2-center"><div class="item--inner builder-item--logo" data-section="title_tagline" data-item-id="logo" >		<div class="site-branding logo-bottom">
+						<a href="../index.html" class="logo-link" rel="home" itemprop="url">
+				<img class="site-img-logo" src="../../i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/cropped-%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-09-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.08.0426a3.png?fit=68%2C68&amp;ssl=1" alt="">
+							</a>
+			<div class="site-name-desc">						<p class="site-title">
+							<a href="../index.html" rel="home"></a>
+						</p>
+						</div>		</div><!-- .site-branding -->
+		</div></div><div class="col-v2 col-v2-right"><div class="item--inner builder-item--search_icon" data-section="search_icon" data-item-id="search_icon" ><div class="header-search_icon-item item--search_icon">		<a class="search-icon" href="#">
+			<span class="ic-search">
+				<svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+					<path fill="currentColor" fill-rule="evenodd" d="M12.514 14.906a8.264 8.264 0 0 1-4.322 1.21C3.668 16.116 0 12.513 0 8.07 0 3.626 3.668.023 8.192.023c4.525 0 8.193 3.603 8.193 8.047 0 2.033-.769 3.89-2.035 5.307l4.999 5.552-1.775 1.597-5.06-5.62zm-4.322-.843c3.37 0 6.102-2.684 6.102-5.993 0-3.31-2.732-5.994-6.102-5.994S2.09 4.76 2.09 8.07c0 3.31 2.732 5.993 6.102 5.993z"></path>
+				</svg>
+			</span>
+			<span class="ic-close">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="612px" height="612px" viewBox="0 0 612 612" fill="currentColor" style="enable-background:new 0 0 612 612;" xml:space="preserve"><g><g id="cross"><g><polygon points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397 306,341.411 576.521,611.397 612,575.997 341.459,306.011 " /></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+			</span>
+			<span class="arrow-down"></span>
+		</a>
+		<div class="header-search-modal-wrapper">
+			<form role="search" class="header-search-modal header-search-form" action="https://fxtradeonline.net/">
+				<label>
+					<span class="screen-reader-text">검색 :</span>
+					<input type="search" class="search-field" placeholder="검색 ..." value="" name="s" title="검색 :" />
+				</label>
+				<button type="submit" class="search-submit">
+					<svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+						<path fill="currentColor" fill-rule="evenodd" d="M12.514 14.906a8.264 8.264 0 0 1-4.322 1.21C3.668 16.116 0 12.513 0 8.07 0 3.626 3.668.023 8.192.023c4.525 0 8.193 3.603 8.193 8.047 0 2.033-.769 3.89-2.035 5.307l4.999 5.552-1.775 1.597-5.06-5.62zm-4.322-.843c3.37 0 6.102-2.684 6.102-5.993 0-3.31-2.732-5.994-6.102-5.994S2.09 4.76 2.09 8.07c0 3.31 2.732 5.993 6.102 5.993z"></path>
+					</svg>
+				</button>
+			</form>
+		</div>
+		</div></div><div class="item--inner builder-item--button" data-section="header_button" data-item-id="button" ><a href="../my-account/index.html" class="item--button customify-btn customify-builder-btn is-icon-after">    <i class="fa fa-user"></i> </a></div></div></div></div>									</div>
+								</div>
+							</div>
+							<div id="header-menu-sidebar" class="header-menu-sidebar menu-sidebar-panel dark-mode"><div id="header-menu-sidebar-bg" class="header-menu-sidebar-bg"><div id="header-menu-sidebar-inner" class="header-menu-sidebar-inner"><div class="builder-item-sidebar mobile-item--search_box"><div class="item--inner" data-item-id="search_box" data-section="search_box"><div class="header-search_box-item item--search_box">		<form role="search" class="header-search-form " action="https://fxtradeonline.net/">
+			<div class="search-form-fields">
+				<span class="screen-reader-text">검색 :</span>
+				
+				<input type="search" class="search-field" placeholder="검색 ..." value="" name="s" title="검색 :" />
+
+							</div>
+			<button type="submit" class="search-submit">
+				<svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21">
+					<path fill="currentColor" fill-rule="evenodd" d="M12.514 14.906a8.264 8.264 0 0 1-4.322 1.21C3.668 16.116 0 12.513 0 8.07 0 3.626 3.668.023 8.192.023c4.525 0 8.193 3.603 8.193 8.047 0 2.033-.769 3.89-2.035 5.307l4.999 5.552-1.775 1.597-5.06-5.62zm-4.322-.843c3.37 0 6.102-2.684 6.102-5.993 0-3.31-2.732-5.994-6.102-5.994S2.09 4.76 2.09 8.07c0 3.31 2.732 5.993 6.102 5.993z"></path>
+				</svg>
+			</button>
+		</form>
+		</div></div></div><div class="builder-item-sidebar mobile-item--primary-menu mobile-item--menu "><div class="item--inner" data-item-id="primary-menu" data-section="header_menu_primary"><nav  id="site-navigation-sidebar-mobile" class="site-navigation primary-menu primary-menu-sidebar nav-menu-mobile primary-menu-mobile style-border-bottom hide-arrow-active"><ul id="menu-bsq" class="primary-menu-ul menu nav-menu"><li id="menu-item--sidebar-mobile-2107" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1893 current_page_item menu-item-2107"><a href="index.html" aria-current="page"><span class="link-before">Test Setup</span></a></li>
+<li id="menu-item--sidebar-mobile-2108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2108"><a href="../test-sts/index.html"><span class="link-before">Test Statistics</span></a></li>
+</ul></nav></div></div><div class="builder-item-sidebar mobile-item--social-icons"><div class="item--inner" data-item-id="social-icons" data-section="header_social_icons"></div></div></div></div></div></div></header>	<div id="site-content" class="site-content">
+		<div class="customify-container">
+			<div class="customify-grid">
+				<main id="main" class="content-area customify-col-12">
+						<div class="content-inner">
+		<article id="post-1893" class="post-1893 page type-page status-publish hentry">
+	
+	<div class="entry-content">
+				<div data-elementor-type="wp-page" data-elementor-id="1893" class="elementor elementor-1893" data-elementor-settings="[]">
+						<div class="elementor-inner">
+							<div class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-418f5bb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="418f5bb" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8ca735e" data-id="8ca735e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-009cbd7 elementor-widget elementor-widget-heading" data-id="009cbd7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">APP</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3c91429" data-id="3c91429" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-f8d062a elementor-widget elementor-widget-heading" data-id="f8d062a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">API</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-d808448 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d808448" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f68e215" data-id="f68e215" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-be59245 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="be59245" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c077c55" data-id="c077c55" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-cc5e7af elementor-widget elementor-widget-image" data-id="cc5e7af" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="504" height="88" src="../../i1.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.54.005385.png?fit=504%2C88&amp;ssl=1" class="elementor-animation-push attachment-large size-large" alt="" loading="lazy" srcset="https://i1.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.54.00.png?w=504&amp;ssl=1 504w, https://i1.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.54.00.png?resize=300%2C52&amp;ssl=1 300w" sizes="(max-width: 504px) 100vw, 504px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d5077cb" data-id="d5077cb" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-dd2cfa3 elementor-widget elementor-widget-image" data-id="dd2cfa3" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="516" height="96" src="../../i1.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.55.082873.png?fit=516%2C96&amp;ssl=1" class="elementor-animation-push attachment-large size-large" alt="" loading="lazy" srcset="https://i1.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.55.08.png?w=516&amp;ssl=1 516w, https://i1.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.55.08.png?resize=300%2C56&amp;ssl=1 300w" sizes="(max-width: 516px) 100vw, 516px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-7d19b6a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7d19b6a" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-325c65d" data-id="325c65d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5e0cea9 elementor-widget elementor-widget-image" data-id="5e0cea9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="500" height="98" src="../../i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.56.12-184ee.png?fit=500%2C98&amp;ssl=1" class="elementor-animation-push attachment-large size-large" alt="" loading="lazy" srcset="https://i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.12-1.png?w=500&amp;ssl=1 500w, https://i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.12-1.png?resize=300%2C59&amp;ssl=1 300w" sizes="(max-width: 500px) 100vw, 500px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a754e81" data-id="a754e81" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-aacec7c elementor-widget elementor-widget-image" data-id="aacec7c" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="308" height="102" src="../../i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.58.29d704.png?fit=308%2C102&amp;ssl=1" class="elementor-animation-push attachment-large size-large" alt="" loading="lazy" srcset="https://i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.58.29.png?w=308&amp;ssl=1 308w, https://i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.58.29.png?resize=300%2C99&amp;ssl=1 300w" sizes="(max-width: 308px) 100vw, 308px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-55e5c24 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="55e5c24" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d4d422f" data-id="d4d422f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-f250517 elementor-widget elementor-widget-image" data-id="f250517" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="426" height="102" src="../../i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.56.29b348.png?fit=426%2C102&amp;ssl=1" class="elementor-animation-push attachment-full size-full" alt="" loading="lazy" srcset="https://i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.29.png?w=426&amp;ssl=1 426w, https://i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.29.png?resize=300%2C72&amp;ssl=1 300w" sizes="(max-width: 426px) 100vw, 426px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-fa7c8da" data-id="fa7c8da" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-bcd70c8 elementor-widget elementor-widget-image" data-id="bcd70c8" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="364" height="88" src="../../i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.56.4157b9.png?fit=364%2C88&amp;ssl=1" class="elementor-animation-push attachment-large size-large" alt="" loading="lazy" srcset="https://i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.41.png?w=364&amp;ssl=1 364w, https://i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.41.png?resize=300%2C73&amp;ssl=1 300w" sizes="(max-width: 364px) 100vw, 364px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-f8525cd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f8525cd" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7dbe671" data-id="7dbe671" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4ce80be elementor-widget elementor-widget-image" data-id="4ce80be" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="342" height="104" src="../../i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.56.49c662.png?fit=342%2C104&amp;ssl=1" class="elementor-animation-push attachment-large size-large" alt="" loading="lazy" srcset="https://i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.49.png?w=342&amp;ssl=1 342w, https://i0.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.49.png?resize=300%2C91&amp;ssl=1 300w" sizes="(max-width: 342px) 100vw, 342px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-095d8db" data-id="095d8db" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ddbaf1b elementor-widget elementor-widget-image" data-id="ddbaf1b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="392" height="94" src="../../i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/%e1%84%89%e1%85%b3%e1%84%8f%e1%85%b3%e1%84%85%e1%85%b5%e1%86%ab%e1%84%89%e1%85%a3%e1%86%ba-2020-11-02-%e1%84%8b%e1%85%a9%e1%84%8c%e1%85%a5%e1%86%ab-11.56.55aafb.png?fit=392%2C94&amp;ssl=1" class="elementor-animation-push attachment-large size-large" alt="" loading="lazy" srcset="https://i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.55.png?w=392&amp;ssl=1 392w, https://i2.wp.com/fxtradeonline.net/wp-content/uploads/2020/11/스크린샷-2020-11-02-오전-11.56.55.png?resize=300%2C72&amp;ssl=1 300w" sizes="(max-width: 392px) 100vw, 392px" />											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-184b3c9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="184b3c9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-918b532" data-id="918b532" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ff7adce elementor-button-info elementor-align-center elementor-widget elementor-widget-button" data-id="ff7adce" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-xl elementor-animation-pop" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">RUN</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-807cd34 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="807cd34" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0947cc7" data-id="0947cc7" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-42c7339 elementor-widget elementor-widget-spacer" data-id="42c7339" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-ece9c3f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ece9c3f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0aa0c44" data-id="0aa0c44" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c4812e4 elementor-widget elementor-widget-progress" data-id="c4812e4" data-element_type="widget" data-widget_type="progress.default">
+				<div class="elementor-widget-container">
+						<span class="elementor-title">{{단말명}} 진행사항</span>
+		
+		<div class="elementor-progress-wrapper" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="64" aria-valuetext="테스트 진행률">
+			<div class="elementor-progress-bar" data-max="64">
+				<span class="elementor-progress-text">테스트 진행률</span>
+									<span class="elementor-progress-percentage">64%</span>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-9ff4eca elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9ff4eca" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e17f577" data-id="e17f577" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-bce67b0 elementor-widget elementor-widget-progress" data-id="bce67b0" data-element_type="widget" data-widget_type="progress.default">
+				<div class="elementor-widget-container">
+						<span class="elementor-title">Pass</span>
+		
+		<div class="elementor-progress-wrapper" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="성공">
+			<div class="elementor-progress-bar" data-max="50">
+				<span class="elementor-progress-text">성공</span>
+									<span class="elementor-progress-percentage">50%</span>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4dd0f25 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4dd0f25" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-edfe103" data-id="edfe103" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-36e7d0e elementor-widget elementor-widget-progress" data-id="36e7d0e" data-element_type="widget" data-widget_type="progress.default">
+				<div class="elementor-widget-container">
+						<span class="elementor-title">Fail</span>
+		
+		<div class="elementor-progress-wrapper" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="14" aria-valuetext="실패">
+			<div class="elementor-progress-bar" data-max="14">
+				<span class="elementor-progress-text">실패</span>
+									<span class="elementor-progress-percentage">14%</span>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3e55e58 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3e55e58" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9055bea" data-id="9055bea" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b290e63 elementor-widget elementor-widget-spacer" data-id="b290e63" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5728383 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5728383" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b5fd5f4" data-id="b5fd5f4" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-db434e7 elementor-tabs-view-horizontal elementor-widget elementor-widget-tabs" data-id="db434e7" data-element_type="widget" data-widget_type="tabs.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-tabs" role="tablist">
+			<div class="elementor-tabs-wrapper">
+									<div id="elementor-tab-title-2291" class="elementor-tab-title elementor-tab-desktop-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-2291"><a href="#">Test Results</a></div>
+									<div id="elementor-tab-title-2292" class="elementor-tab-title elementor-tab-desktop-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-2292"><a href="#">Failure</a></div>
+							</div>
+			<div class="elementor-tabs-content-wrapper">
+									<div class="elementor-tab-title elementor-tab-mobile-title" data-tab="1" role="tab">Test Results</div>
+					<div id="elementor-tab-content-2291" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-2291"><p><b>{{../pytest.xml}}</b></p><pre style="background-color: #2b2b2b; color: #a9b7c6; font-family: 'JetBrains Mono'; font-size: 9.8pt;"><span style="color: #808080;">&lt;#<br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Synopsis<br /></span><span style="color: #808080;">Activate a Python virtual environment for the current Powershell session.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Description<br /></span><span style="color: #808080;">Pushes the python executable for a virtual environment to the front of the<br /></span><span style="color: #808080;">$Env:PATH environment variable and sets the prompt to signify that you are<br /></span><span style="color: #808080;">in a Python virtual environment. Makes use of the command line switches as<br /></span><span style="color: #808080;">well as the `pyvenv.cfg` file values present in the virtual environment.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter VenvDir<br /></span><span style="color: #808080;">Path to the directory that contains the virtual environment to activate. The<br /></span><span style="color: #808080;">default value for this is the parent of the directory that the Activate.ps1<br /></span><span style="color: #808080;">script is located within.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter Prompt<br /></span><span style="color: #808080;">The prompt prefix to display when this virtual environment is activated. By<br /></span><span style="color: #808080;">default, this prompt is the name of the virtual environment folder (VenvDir)<br /></span><span style="color: #808080;">surrounded by parentheses and followed by a single space (ie. '(.venv) ').<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1<br /></span><span style="color: #808080;">Activates the Python virtual environment that contains the Activate.ps1 script.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1 -Verbose<br /></span><span style="color: #808080;">Activates the Python virtual environment that contains the Activate.ps1 script,<br /></span><span style="color: #808080;">and shows extra information about the activation as it executes.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1 -VenvDir C:\Users\MyUser\Common\.venv<br /></span><span style="color: #808080;">Activates the Python virtual environment located in the specified location.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1 -Prompt "MyPython"<br /></span><span style="color: #808080;">Activates the Python virtual environment that contains the Activate.ps1 script,<br /></span><span style="color: #808080;">and prefixes the current prompt with the specified string (surrounded in<br /></span><span style="color: #808080;">parentheses) while the virtual environment is active.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">#&gt;<br /></span><span style="color: #cc7832;">Param</span>(<br />    [Parameter(Mandatory <span style="color: #cc7832;">= </span><span style="color: #9876aa; font-style: italic;">$false</span>)]<br />    [<span style="color: #cc7832;">String</span>]<br />    $VenvDir<span style="color: #cc7832;">,<br /></span>    [Parameter(Mandatory <span style="color: #cc7832;">= </span><span style="color: #9876aa; font-style: italic;">$false</span>)]<br />    [<span style="color: #cc7832;">String</span>]<br />    $Prompt<br />)<br /><br /><span style="color: #808080;">&lt;# Function declarations --------------------------------------------------- #&gt;<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">&lt;#<br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Synopsis<br /></span><span style="color: #808080;">Remove all shell session elements added by the Activate script, including the<br /></span><span style="color: #808080;">addition of the virtual environment's Python executable from the beginning of<br /></span><span style="color: #808080;">the PATH variable.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter NonDestructive<br /></span><span style="color: #808080;">If present, do not remove this function from the global namespace for the<br /></span><span style="color: #808080;">session.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">#&gt;<br /></span><span style="color: #cc7832;">function global</span>:<span style="color: #ffc66d;">deactivate </span>([<span style="color: #cc7832;">switch</span>]$NonDestructive) {<br />    <span style="color: #808080;"># Revert to original values<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">    # The prior prompt:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Function:_OLD_VIRTUAL_PROMPT) {<br />        Copy-Item <span style="color: #cc7832;">-</span>Path Function:_OLD_VIRTUAL_PROMPT <span style="color: #cc7832;">-</span>Destination Function:prompt<br />        Remove-Item <span style="color: #cc7832;">-</span>Path Function:_OLD_VIRTUAL_PROMPT<br />    }<br /><br />    <span style="color: #808080;"># The prior PYTHONHOME:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PYTHONHOME) {<br />        Copy-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PYTHONHOME <span style="color: #cc7832;">-</span>Destination Env:PYTHONHOME<br />        Remove-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PYTHONHOME<br />    }<br /><br />    <span style="color: #808080;"># The prior PATH:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PATH) {<br />        Copy-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PATH <span style="color: #cc7832;">-</span>Destination Env:PATH<br />        Remove-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PATH<br />    }<br /><br />    <span style="color: #808080;"># Just remove the VIRTUAL_ENV altogether:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:VIRTUAL_ENV) {<br />        Remove-Item <span style="color: #cc7832;">-</span>Path env:VIRTUAL_ENV<br />    }<br /><br />    <span style="color: #808080;"># Just remove the _PYTHON_VENV_PROMPT_PREFIX altogether:<br /></span>    <span style="color: #cc7832;">if </span>(Get-Variable <span style="color: #cc7832;">-</span>Name <span style="color: #6a8759;">"_PYTHON_VENV_PROMPT_PREFIX" </span><span style="color: #cc7832;">-</span>ErrorAction SilentlyContinue) {<br />        Remove-Variable <span style="color: #cc7832;">-</span>Name _PYTHON_VENV_PROMPT_PREFIX <span style="color: #cc7832;">-</span>Scope Global <span style="color: #cc7832;">-</span>Force<br />    }<br /><br />    <span style="color: #808080;"># Leave deactivate function in the global namespace if requested:<br /></span>    <span style="color: #cc7832;">if </span>(<span style="color: #cc7832;">-not </span>$NonDestructive) {<br />        Remove-Item <span style="color: #cc7832;">-</span>Path function:deactivate<br />    }<br />}<br /><br /><span style="color: #808080;">&lt;#<br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Description<br /></span><span style="color: #808080;">Get-PyVenvConfig parses the values from the pyvenv.cfg file located in the<br /></span><span style="color: #808080;">given folder, and returns them in a map.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">For each line in the pyvenv.cfg file, if that line can be parsed into exactly<br /></span><span style="color: #808080;">two strings separated by `=` (with any amount of whitespace surrounding the =)<br /></span><span style="color: #808080;">then it is considered a `key = value` line. The left hand string is the key,<br /></span><span style="color: #808080;">the right hand is the value.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">If the value starts with a `'` or a `"` then the first and last character is<br /></span><span style="color: #808080;">stripped from the value before being captured.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter ConfigDir<br /></span><span style="color: #808080;">Path to the directory that contains the `pyvenv.cfg` file.<br /></span><span style="color: #808080;">#&gt;<br /></span><span style="color: #cc7832;">function </span><span style="color: #ffc66d;">Get-PyVenvConfig</span>(<br />    [<span style="color: #cc7832;">String</span>]<br />    $ConfigDir<br />) {<br />    Write-Verbose <span style="color: #6a8759;">"Given ConfigDir=</span>$ConfigDir<span style="color: #6a8759;">, obtain values in pyvenv.cfg"<br /></span><span style="color: #6a8759;"><br /></span>    <span style="color: #808080;"># Ensure the file exists, and issue a warning if it doesn't (but still allow the function to continue).<br /></span>    $pyvenvConfigPath <span style="color: #cc7832;">= </span>Join-Path <span style="color: #cc7832;">-</span>Resolve <span style="color: #cc7832;">-</span>Path $ConfigDir <span style="color: #cc7832;">-</span>ChildPath <span style="color: #6a8759;">'pyvenv.cfg' </span><span style="color: #cc7832;">-</span>ErrorAction <span style="color: #cc7832;">Continue<br /></span><span style="color: #cc7832;"><br /></span>    <span style="color: #808080;"># An empty map will be returned if no config file is found.<br /></span>    $pyvenvConfig <span style="color: #cc7832;">= @</span>{ }<br /><br />    <span style="color: #cc7832;">if </span>($pyvenvConfigPath) {<br /><br />        Write-Verbose <span style="color: #6a8759;">"File exists, parse `key = value` lines"<br /></span>        $pyvenvConfigContent <span style="color: #cc7832;">= </span>Get-Content <span style="color: #cc7832;">-</span>Path $pyvenvConfigPath<br /><br />        $pyvenvConfigContent <span style="color: #cc7832;">| </span>ForEach-Object {<br />            $keyval <span style="color: #cc7832;">= </span>$PSItem <span style="color: #cc7832;">-split </span><span style="color: #6a8759;">"\s*=\s*"</span><span style="color: #cc7832;">, </span><span style="color: #6897bb; font-style: italic;">2<br /></span>            <span style="color: #cc7832;">if </span>($keyval[<span style="color: #6897bb; font-style: italic;">0</span>] <span style="color: #cc7832;">-and </span>$keyval[<span style="color: #6897bb; font-style: italic;">1</span>]) {<br />                $val <span style="color: #cc7832;">= </span>$keyval[<span style="color: #6897bb; font-style: italic;">1</span>]<br /><br />                <span style="color: #808080;"># Remove extraneous quotations around a string value.<br /></span>                <span style="color: #cc7832;">if </span>(<span style="color: #6a8759;">"'</span><span style="color: #cc7832; font-style: italic;">""</span><span style="color: #6a8759;">"</span>.Contains($val.Substring(<span style="color: #6897bb; font-style: italic;">0</span><span style="color: #cc7832;">,</span><span style="color: #6897bb; font-style: italic;">1</span>))) {<br />                    $val <span style="color: #cc7832;">= </span>$val.Substring(<span style="color: #6897bb; font-style: italic;">1</span><span style="color: #cc7832;">, </span>$val.Length <span style="color: #cc7832;">- </span><span style="color: #6897bb; font-style: italic;">2</span>)<br />                }<br /><br />                $pyvenvConfig[$keyval[<span style="color: #6897bb; font-style: italic;">0</span>]] <span style="color: #cc7832;">= </span>$val<br />                Write-Verbose <span style="color: #6a8759;">"Adding Key: '$(</span>$keyval<span style="color: #6a8759;">[</span><span style="color: #6897bb; font-style: italic;">0</span><span style="color: #6a8759;">])'='</span>$val<span style="color: #6a8759;">'"<br /></span>            }<br />        }<br />    }<br />    <span style="color: #cc7832;">return </span>$pyvenvConfig<br />}<br /><br /><br /><span style="color: #808080;">&lt;# Begin Activate script --------------------------------------------------- #&gt;<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;"># Determine the containing directory of this script<br /></span>$VenvExecPath <span style="color: #cc7832;">= </span>Split-Path <span style="color: #cc7832;">-</span>Parent $MyInvocation.MyCommand.Definition<br />$VenvExecDir <span style="color: #cc7832;">= </span>Get-Item <span style="color: #cc7832;">-</span>Path $VenvExecPath<br /><br />Write-Verbose <span style="color: #6a8759;">"Activation script is located in path: '</span>$VenvExecPath<span style="color: #6a8759;">'"<br /></span>Write-Verbose <span style="color: #6a8759;">"VenvExecDir Fullname: '$(</span>$VenvExecDir.FullName<span style="color: #6a8759;">)"<br /></span>Write-Verbose <span style="color: #6a8759;">"VenvExecDir Name: '$(</span>$VenvExecDir.Name<span style="color: #6a8759;">)"<br /></span><span style="color: #6a8759;"><br /></span><span style="color: #808080;"># Set values required in priority: CmdLine, ConfigFile, Default<br /></span><span style="color: #808080;"># First, get the location of the virtual environment, it might not be<br /></span><span style="color: #808080;"># VenvExecDir if specified on the command line.<br /></span><span style="color: #cc7832;">if </span>($VenvDir) {<br />    Write-Verbose <span style="color: #6a8759;">"VenvDir given as parameter, using '</span>$VenvDir<span style="color: #6a8759;">' to determine values"<br /></span>} <span style="color: #cc7832;">else </span>{<br />    Write-Verbose <span style="color: #6a8759;">"VenvDir not given as a parameter, using parent directory name as VenvDir."<br /></span>    $VenvDir <span style="color: #cc7832;">= </span>$VenvExecDir.Parent.FullName.TrimEnd(<span style="color: #6a8759;">"\\/"</span>)<br />    Write-Verbose <span style="color: #6a8759;">"VenvDir=</span>$VenvDir<span style="color: #6a8759;">"<br /></span>}<br /><br /><span style="color: #808080;"># Next, read the `pyvenv.cfg` file to determine any required value such<br /></span><span style="color: #808080;"># as `prompt`.<br /></span>$pyvenvCfg <span style="color: #cc7832;">= </span>Get-PyVenvConfig <span style="color: #cc7832;">-</span>ConfigDir $VenvDir<br /><br /><span style="color: #808080;"># Next, set the prompt from the command line, or the config file, or<br /></span><span style="color: #808080;"># just use the name of the virtual environment folder.<br /></span><span style="color: #cc7832;">if </span>($Prompt) {<br />    Write-Verbose <span style="color: #6a8759;">"Prompt specified as argument, using '</span>$Prompt<span style="color: #6a8759;">'"<br /></span>} <span style="color: #cc7832;">else </span>{<br />    Write-Verbose <span style="color: #6a8759;">"Prompt not specified as argument to script, checking pyvenv.cfg value"<br /></span>    <span style="color: #cc7832;">if </span>($pyvenvCfg <span style="color: #cc7832;">-and </span>$pyvenvCfg[<span style="color: #6a8759;">'prompt'</span>]) {<br />        Write-Verbose <span style="color: #6a8759;">"  Setting based on value in pyvenv.cfg='$(</span>$pyvenvCfg<span style="color: #6a8759;">['prompt'])'"<br /></span>        $Prompt <span style="color: #cc7832;">= </span>$pyvenvCfg[<span style="color: #6a8759;">'prompt'</span>];<br />    }<br />    <span style="color: #cc7832;">else </span>{<br />        Write-Verbose <span style="color: #6a8759;">"  Setting prompt based on parent's directory's name. (Is the directory name passed to venv module when creating the virutal environment)"<br /></span>        Write-Verbose <span style="color: #6a8759;">"  Got leaf-name of </span>$VenvDir<span style="color: #6a8759;">='$(Split-Path </span><span style="color: #cc7832;">-</span><span style="color: #6a8759;">Path </span>$venvDir <span style="color: #cc7832;">-</span><span style="color: #6a8759;">Leaf)'"<br /></span>        $Prompt <span style="color: #cc7832;">= </span>Split-Path <span style="color: #cc7832;">-</span>Path $venvDir <span style="color: #cc7832;">-</span>Leaf<br />    }<br />}<br /><br />Write-Verbose <span style="color: #6a8759;">"Prompt = '</span>$Prompt<span style="color: #6a8759;">'"<br /></span>Write-Verbose <span style="color: #6a8759;">"VenvDir='</span>$VenvDir<span style="color: #6a8759;">'"<br /></span><span style="color: #6a8759;"><br /></span><span style="color: #808080;"># Deactivate any currently active virtual environment, but leave the<br /></span><span style="color: #808080;"># deactivate function in place.<br /></span>deactivate <span style="color: #cc7832;">-</span>nondestructive<br /><br /><span style="color: #808080;"># Now set the environment variable VIRTUAL_ENV, used by many tools to determine<br /></span><span style="color: #808080;"># that there is an activated venv.<br /></span>$env:VIRTUAL_ENV <span style="color: #cc7832;">= </span>$VenvDir<br /><br /><span style="color: #cc7832;">if </span>(<span style="color: #cc7832;">-not </span>$Env:VIRTUAL_ENV_DISABLE_PROMPT) {<br /><br />    Write-Verbose <span style="color: #6a8759;">"Setting prompt to '</span>$Prompt<span style="color: #6a8759;">'"<br /></span><span style="color: #6a8759;"><br /></span>    <span style="color: #808080;"># Set the prompt to include the env name<br /></span><span style="color: #808080;">    # Make sure _OLD_VIRTUAL_PROMPT is global<br /></span>    <span style="color: #cc7832;">function global</span>:<span style="color: #ffc66d;">_OLD_VIRTUAL_PROMPT </span>{ <span style="color: #6a8759;">"" </span>}<br />    Copy-Item <span style="color: #cc7832;">-</span>Path function:prompt <span style="color: #cc7832;">-</span>Destination function:_OLD_VIRTUAL_PROMPT<br />    New-Variable <span style="color: #cc7832;">-</span>Name _PYTHON_VENV_PROMPT_PREFIX <span style="color: #cc7832;">-</span>Description <span style="color: #6a8759;">"Python virtual environment prompt prefix" </span><span style="color: #cc7832;">-</span>Scope Global <span style="color: #cc7832;">-</span>Option ReadOnly <span style="color: #cc7832;">-</span>Visibility Public <span style="color: #cc7832;">-</span>Value $Prompt<br /><br />    <span style="color: #cc7832;">function global</span>:<span style="color: #ffc66d;">prompt </span>{<br />        Write-Host <span style="color: #cc7832;">-</span>NoNewline <span style="color: #cc7832;">-</span>ForegroundColor Green <span style="color: #6a8759;">"(</span>$_PYTHON_VENV_PROMPT_PREFIX<span style="color: #6a8759;">) "<br /></span>        _OLD_VIRTUAL_PROMPT<br />    }<br />}<br /><br /><span style="color: #808080;"># Clear PYTHONHOME<br /></span><span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:PYTHONHOME) {<br />    Copy-Item <span style="color: #cc7832;">-</span>Path Env:PYTHONHOME <span style="color: #cc7832;">-</span>Destination Env:_OLD_VIRTUAL_PYTHONHOME<br />    Remove-Item <span style="color: #cc7832;">-</span>Path Env:PYTHONHOME<br />}<br /><br /><span style="color: #808080;"># Add the venv to the PATH<br /></span>Copy-Item <span style="color: #cc7832;">-</span>Path Env:PATH <span style="color: #cc7832;">-</span>Destination Env:_OLD_VIRTUAL_PATH<br />$Env:PATH <span style="color: #cc7832;">= </span><span style="color: #6a8759;">"</span>$VenvExecDir<span style="color: #6a8759;">$([</span><span style="color: #cc7832;">System.IO.Path</span><span style="color: #6a8759;">]::PathSeparator)</span>$Env:PATH<span style="color: #6a8759;">"<br /></span></pre></div>
+									<div class="elementor-tab-title elementor-tab-mobile-title" data-tab="2" role="tab">Failure</div>
+					<div id="elementor-tab-content-2292" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-2292"><p><b>{{../pytest.xml on fail}}</b></p><pre style="background-color: #2b2b2b; color: #a9b7c6; font-family: 'JetBrains Mono'; font-size: 9.8pt;"><span style="color: #808080;">&lt;#<br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Synopsis<br /></span><span style="color: #808080;">Activate a Python virtual environment for the current Powershell session.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Description<br /></span><span style="color: #808080;">Pushes the python executable for a virtual environment to the front of the<br /></span><span style="color: #808080;">$Env:PATH environment variable and sets the prompt to signify that you are<br /></span><span style="color: #808080;">in a Python virtual environment. Makes use of the command line switches as<br /></span><span style="color: #808080;">well as the `pyvenv.cfg` file values present in the virtual environment.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter VenvDir<br /></span><span style="color: #808080;">Path to the directory that contains the virtual environment to activate. The<br /></span><span style="color: #808080;">default value for this is the parent of the directory that the Activate.ps1<br /></span><span style="color: #808080;">script is located within.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter Prompt<br /></span><span style="color: #808080;">The prompt prefix to display when this virtual environment is activated. By<br /></span><span style="color: #808080;">default, this prompt is the name of the virtual environment folder (VenvDir)<br /></span><span style="color: #808080;">surrounded by parentheses and followed by a single space (ie. '(.venv) ').<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1<br /></span><span style="color: #808080;">Activates the Python virtual environment that contains the Activate.ps1 script.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1 -Verbose<br /></span><span style="color: #808080;">Activates the Python virtual environment that contains the Activate.ps1 script,<br /></span><span style="color: #808080;">and shows extra information about the activation as it executes.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1 -VenvDir C:\Users\MyUser\Common\.venv<br /></span><span style="color: #808080;">Activates the Python virtual environment located in the specified location.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Example<br /></span><span style="color: #808080;">Activate.ps1 -Prompt "MyPython"<br /></span><span style="color: #808080;">Activates the Python virtual environment that contains the Activate.ps1 script,<br /></span><span style="color: #808080;">and prefixes the current prompt with the specified string (surrounded in<br /></span><span style="color: #808080;">parentheses) while the virtual environment is active.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">#&gt;<br /></span><span style="color: #cc7832;">Param</span>(<br />    [Parameter(Mandatory <span style="color: #cc7832;">= </span><span style="color: #9876aa; font-style: italic;">$false</span>)]<br />    [<span style="color: #cc7832;">String</span>]<br />    $VenvDir<span style="color: #cc7832;">,<br /></span>    [Parameter(Mandatory <span style="color: #cc7832;">= </span><span style="color: #9876aa; font-style: italic;">$false</span>)]<br />    [<span style="color: #cc7832;">String</span>]<br />    $Prompt<br />)<br /><br /><span style="color: #808080;">&lt;# Function declarations --------------------------------------------------- #&gt;<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">&lt;#<br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Synopsis<br /></span><span style="color: #808080;">Remove all shell session elements added by the Activate script, including the<br /></span><span style="color: #808080;">addition of the virtual environment's Python executable from the beginning of<br /></span><span style="color: #808080;">the PATH variable.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter NonDestructive<br /></span><span style="color: #808080;">If present, do not remove this function from the global namespace for the<br /></span><span style="color: #808080;">session.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">#&gt;<br /></span><span style="color: #cc7832;">function global</span>:<span style="color: #ffc66d;">deactivate </span>([<span style="color: #cc7832;">switch</span>]$NonDestructive) {<br />    <span style="color: #808080;"># Revert to original values<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">    # The prior prompt:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Function:_OLD_VIRTUAL_PROMPT) {<br />        Copy-Item <span style="color: #cc7832;">-</span>Path Function:_OLD_VIRTUAL_PROMPT <span style="color: #cc7832;">-</span>Destination Function:prompt<br />        Remove-Item <span style="color: #cc7832;">-</span>Path Function:_OLD_VIRTUAL_PROMPT<br />    }<br /><br />    <span style="color: #808080;"># The prior PYTHONHOME:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PYTHONHOME) {<br />        Copy-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PYTHONHOME <span style="color: #cc7832;">-</span>Destination Env:PYTHONHOME<br />        Remove-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PYTHONHOME<br />    }<br /><br />    <span style="color: #808080;"># The prior PATH:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PATH) {<br />        Copy-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PATH <span style="color: #cc7832;">-</span>Destination Env:PATH<br />        Remove-Item <span style="color: #cc7832;">-</span>Path Env:_OLD_VIRTUAL_PATH<br />    }<br /><br />    <span style="color: #808080;"># Just remove the VIRTUAL_ENV altogether:<br /></span>    <span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:VIRTUAL_ENV) {<br />        Remove-Item <span style="color: #cc7832;">-</span>Path env:VIRTUAL_ENV<br />    }<br /><br />    <span style="color: #808080;"># Just remove the _PYTHON_VENV_PROMPT_PREFIX altogether:<br /></span>    <span style="color: #cc7832;">if </span>(Get-Variable <span style="color: #cc7832;">-</span>Name <span style="color: #6a8759;">"_PYTHON_VENV_PROMPT_PREFIX" </span><span style="color: #cc7832;">-</span>ErrorAction SilentlyContinue) {<br />        Remove-Variable <span style="color: #cc7832;">-</span>Name _PYTHON_VENV_PROMPT_PREFIX <span style="color: #cc7832;">-</span>Scope Global <span style="color: #cc7832;">-</span>Force<br />    }<br /><br />    <span style="color: #808080;"># Leave deactivate function in the global namespace if requested:<br /></span>    <span style="color: #cc7832;">if </span>(<span style="color: #cc7832;">-not </span>$NonDestructive) {<br />        Remove-Item <span style="color: #cc7832;">-</span>Path function:deactivate<br />    }<br />}<br /><br /><span style="color: #808080;">&lt;#<br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Description<br /></span><span style="color: #808080;">Get-PyVenvConfig parses the values from the pyvenv.cfg file located in the<br /></span><span style="color: #808080;">given folder, and returns them in a map.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">For each line in the pyvenv.cfg file, if that line can be parsed into exactly<br /></span><span style="color: #808080;">two strings separated by `=` (with any amount of whitespace surrounding the =)<br /></span><span style="color: #808080;">then it is considered a `key = value` line. The left hand string is the key,<br /></span><span style="color: #808080;">the right hand is the value.<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;">If the value starts with a `'` or a `"` then the first and last character is<br /></span><span style="color: #808080;">stripped from the value before being captured.<br /></span><span style="color: #808080;"><br /></span><span style="color: #9876aa; font-style: italic;">.</span><span style="color: #cc7832; font-style: italic;">Parameter ConfigDir<br /></span><span style="color: #808080;">Path to the directory that contains the `pyvenv.cfg` file.<br /></span><span style="color: #808080;">#&gt;<br /></span><span style="color: #cc7832;">function </span><span style="color: #ffc66d;">Get-PyVenvConfig</span>(<br />    [<span style="color: #cc7832;">String</span>]<br />    $ConfigDir<br />) {<br />    Write-Verbose <span style="color: #6a8759;">"Given ConfigDir=</span>$ConfigDir<span style="color: #6a8759;">, obtain values in pyvenv.cfg"<br /></span><span style="color: #6a8759;"><br /></span>    <span style="color: #808080;"># Ensure the file exists, and issue a warning if it doesn't (but still allow the function to continue).<br /></span>    $pyvenvConfigPath <span style="color: #cc7832;">= </span>Join-Path <span style="color: #cc7832;">-</span>Resolve <span style="color: #cc7832;">-</span>Path $ConfigDir <span style="color: #cc7832;">-</span>ChildPath <span style="color: #6a8759;">'pyvenv.cfg' </span><span style="color: #cc7832;">-</span>ErrorAction <span style="color: #cc7832;">Continue<br /></span><span style="color: #cc7832;"><br /></span>    <span style="color: #808080;"># An empty map will be returned if no config file is found.<br /></span>    $pyvenvConfig <span style="color: #cc7832;">= @</span>{ }<br /><br />    <span style="color: #cc7832;">if </span>($pyvenvConfigPath) {<br /><br />        Write-Verbose <span style="color: #6a8759;">"File exists, parse `key = value` lines"<br /></span>        $pyvenvConfigContent <span style="color: #cc7832;">= </span>Get-Content <span style="color: #cc7832;">-</span>Path $pyvenvConfigPath<br /><br />        $pyvenvConfigContent <span style="color: #cc7832;">| </span>ForEach-Object {<br />            $keyval <span style="color: #cc7832;">= </span>$PSItem <span style="color: #cc7832;">-split </span><span style="color: #6a8759;">"\s*=\s*"</span><span style="color: #cc7832;">, </span><span style="color: #6897bb; font-style: italic;">2<br /></span>            <span style="color: #cc7832;">if </span>($keyval[<span style="color: #6897bb; font-style: italic;">0</span>] <span style="color: #cc7832;">-and </span>$keyval[<span style="color: #6897bb; font-style: italic;">1</span>]) {<br />                $val <span style="color: #cc7832;">= </span>$keyval[<span style="color: #6897bb; font-style: italic;">1</span>]<br /><br />                <span style="color: #808080;"># Remove extraneous quotations around a string value.<br /></span>                <span style="color: #cc7832;">if </span>(<span style="color: #6a8759;">"'</span><span style="color: #cc7832; font-style: italic;">""</span><span style="color: #6a8759;">"</span>.Contains($val.Substring(<span style="color: #6897bb; font-style: italic;">0</span><span style="color: #cc7832;">,</span><span style="color: #6897bb; font-style: italic;">1</span>))) {<br />                    $val <span style="color: #cc7832;">= </span>$val.Substring(<span style="color: #6897bb; font-style: italic;">1</span><span style="color: #cc7832;">, </span>$val.Length <span style="color: #cc7832;">- </span><span style="color: #6897bb; font-style: italic;">2</span>)<br />                }<br /><br />                $pyvenvConfig[$keyval[<span style="color: #6897bb; font-style: italic;">0</span>]] <span style="color: #cc7832;">= </span>$val<br />                Write-Verbose <span style="color: #6a8759;">"Adding Key: '$(</span>$keyval<span style="color: #6a8759;">[</span><span style="color: #6897bb; font-style: italic;">0</span><span style="color: #6a8759;">])'='</span>$val<span style="color: #6a8759;">'"<br /></span>            }<br />        }<br />    }<br />    <span style="color: #cc7832;">return </span>$pyvenvConfig<br />}<br /><br /><br /><span style="color: #808080;">&lt;# Begin Activate script --------------------------------------------------- #&gt;<br /></span><span style="color: #808080;"><br /></span><span style="color: #808080;"># Determine the containing directory of this script<br /></span>$VenvExecPath <span style="color: #cc7832;">= </span>Split-Path <span style="color: #cc7832;">-</span>Parent $MyInvocation.MyCommand.Definition<br />$VenvExecDir <span style="color: #cc7832;">= </span>Get-Item <span style="color: #cc7832;">-</span>Path $VenvExecPath<br /><br />Write-Verbose <span style="color: #6a8759;">"Activation script is located in path: '</span>$VenvExecPath<span style="color: #6a8759;">'"<br /></span>Write-Verbose <span style="color: #6a8759;">"VenvExecDir Fullname: '$(</span>$VenvExecDir.FullName<span style="color: #6a8759;">)"<br /></span>Write-Verbose <span style="color: #6a8759;">"VenvExecDir Name: '$(</span>$VenvExecDir.Name<span style="color: #6a8759;">)"<br /></span><span style="color: #6a8759;"><br /></span><span style="color: #808080;"># Set values required in priority: CmdLine, ConfigFile, Default<br /></span><span style="color: #808080;"># First, get the location of the virtual environment, it might not be<br /></span><span style="color: #808080;"># VenvExecDir if specified on the command line.<br /></span><span style="color: #cc7832;">if </span>($VenvDir) {<br />    Write-Verbose <span style="color: #6a8759;">"VenvDir given as parameter, using '</span>$VenvDir<span style="color: #6a8759;">' to determine values"<br /></span>} <span style="color: #cc7832;">else </span>{<br />    Write-Verbose <span style="color: #6a8759;">"VenvDir not given as a parameter, using parent directory name as VenvDir."<br /></span>    $VenvDir <span style="color: #cc7832;">= </span>$VenvExecDir.Parent.FullName.TrimEnd(<span style="color: #6a8759;">"\\/"</span>)<br />    Write-Verbose <span style="color: #6a8759;">"VenvDir=</span>$VenvDir<span style="color: #6a8759;">"<br /></span>}<br /><br /><span style="color: #808080;"># Next, read the `pyvenv.cfg` file to determine any required value such<br /></span><span style="color: #808080;"># as `prompt`.<br /></span>$pyvenvCfg <span style="color: #cc7832;">= </span>Get-PyVenvConfig <span style="color: #cc7832;">-</span>ConfigDir $VenvDir<br /><br /><span style="color: #808080;"># Next, set the prompt from the command line, or the config file, or<br /></span><span style="color: #808080;"># just use the name of the virtual environment folder.<br /></span><span style="color: #cc7832;">if </span>($Prompt) {<br />    Write-Verbose <span style="color: #6a8759;">"Prompt specified as argument, using '</span>$Prompt<span style="color: #6a8759;">'"<br /></span>} <span style="color: #cc7832;">else </span>{<br />    Write-Verbose <span style="color: #6a8759;">"Prompt not specified as argument to script, checking pyvenv.cfg value"<br /></span>    <span style="color: #cc7832;">if </span>($pyvenvCfg <span style="color: #cc7832;">-and </span>$pyvenvCfg[<span style="color: #6a8759;">'prompt'</span>]) {<br />        Write-Verbose <span style="color: #6a8759;">"  Setting based on value in pyvenv.cfg='$(</span>$pyvenvCfg<span style="color: #6a8759;">['prompt'])'"<br /></span>        $Prompt <span style="color: #cc7832;">= </span>$pyvenvCfg[<span style="color: #6a8759;">'prompt'</span>];<br />    }<br />    <span style="color: #cc7832;">else </span>{<br />        Write-Verbose <span style="color: #6a8759;">"  Setting prompt based on parent's directory's name. (Is the directory name passed to venv module when creating the virutal environment)"<br /></span>        Write-Verbose <span style="color: #6a8759;">"  Got leaf-name of </span>$VenvDir<span style="color: #6a8759;">='$(Split-Path </span><span style="color: #cc7832;">-</span><span style="color: #6a8759;">Path </span>$venvDir <span style="color: #cc7832;">-</span><span style="color: #6a8759;">Leaf)'"<br /></span>        $Prompt <span style="color: #cc7832;">= </span>Split-Path <span style="color: #cc7832;">-</span>Path $venvDir <span style="color: #cc7832;">-</span>Leaf<br />    }<br />}<br /><br />Write-Verbose <span style="color: #6a8759;">"Prompt = '</span>$Prompt<span style="color: #6a8759;">'"<br /></span>Write-Verbose <span style="color: #6a8759;">"VenvDir='</span>$VenvDir<span style="color: #6a8759;">'"<br /></span><span style="color: #6a8759;"><br /></span><span style="color: #808080;"># Deactivate any currently active virtual environment, but leave the<br /></span><span style="color: #808080;"># deactivate function in place.<br /></span>deactivate <span style="color: #cc7832;">-</span>nondestructive<br /><br /><span style="color: #808080;"># Now set the environment variable VIRTUAL_ENV, used by many tools to determine<br /></span><span style="color: #808080;"># that there is an activated venv.<br /></span>$env:VIRTUAL_ENV <span style="color: #cc7832;">= </span>$VenvDir<br /><br /><span style="color: #cc7832;">if </span>(<span style="color: #cc7832;">-not </span>$Env:VIRTUAL_ENV_DISABLE_PROMPT) {<br /><br />    Write-Verbose <span style="color: #6a8759;">"Setting prompt to '</span>$Prompt<span style="color: #6a8759;">'"<br /></span><span style="color: #6a8759;"><br /></span>    <span style="color: #808080;"># Set the prompt to include the env name<br /></span><span style="color: #808080;">    # Make sure _OLD_VIRTUAL_PROMPT is global<br /></span>    <span style="color: #cc7832;">function global</span>:<span style="color: #ffc66d;">_OLD_VIRTUAL_PROMPT </span>{ <span style="color: #6a8759;">"" </span>}<br />    Copy-Item <span style="color: #cc7832;">-</span>Path function:prompt <span style="color: #cc7832;">-</span>Destination function:_OLD_VIRTUAL_PROMPT<br />    New-Variable <span style="color: #cc7832;">-</span>Name _PYTHON_VENV_PROMPT_PREFIX <span style="color: #cc7832;">-</span>Description <span style="color: #6a8759;">"Python virtual environment prompt prefix" </span><span style="color: #cc7832;">-</span>Scope Global <span style="color: #cc7832;">-</span>Option ReadOnly <span style="color: #cc7832;">-</span>Visibility Public <span style="color: #cc7832;">-</span>Value $Prompt<br /><br />    <span style="color: #cc7832;">function global</span>:<span style="color: #ffc66d;">prompt </span>{<br />        Write-Host <span style="color: #cc7832;">-</span>NoNewline <span style="color: #cc7832;">-</span>ForegroundColor Green <span style="color: #6a8759;">"(</span>$_PYTHON_VENV_PROMPT_PREFIX<span style="color: #6a8759;">) "<br /></span>        _OLD_VIRTUAL_PROMPT<br />    }<br />}<br /><br /><span style="color: #808080;"># Clear PYTHONHOME<br /></span><span style="color: #cc7832;">if </span>(Test-Path <span style="color: #cc7832;">-</span>Path Env:PYTHONHOME) {<br />    Copy-Item <span style="color: #cc7832;">-</span>Path Env:PYTHONHOME <span style="color: #cc7832;">-</span>Destination Env:_OLD_VIRTUAL_PYTHONHOME<br />    Remove-Item <span style="color: #cc7832;">-</span>Path Env:PYTHONHOME<br />}<br /><br /><span style="color: #808080;"># Add the venv to the PATH<br /></span>Copy-Item <span style="color: #cc7832;">-</span>Path Env:PATH <span style="color: #cc7832;">-</span>Destination Env:_OLD_VIRTUAL_PATH<br />$Env:PATH <span style="color: #cc7832;">= </span><span style="color: #6a8759;">"</span>$VenvExecDir<span style="color: #6a8759;">$([</span><span style="color: #cc7832;">System.IO.Path</span><span style="color: #6a8759;">]::PathSeparator)</span>$Env:PATH<span style="color: #6a8759;">"<br /></span></pre><p> </p></div>
+							</div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+						</div>
+					</div>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-1893 -->
+	</div><!-- #.content-inner -->
+              			</main><!-- #main -->
+					</div><!-- #.customify-grid -->
+	</div><!-- #.customify-container -->
+</div><!-- #content -->
+<footer class="site-footer" id="site-footer">							<div  class="footer-main footer--row layout-full-contained"  id="cb-row--footer-main"  data-row-id="main"  data-show-on="desktop">
+								<div class="footer--row-inner footer-main-inner dark-mode">
+									<div class="customify-container">
+										<div class="customify-grid  customify-grid-top"><div class="customify-col-12_md-12_sm-12_xs-12 builder-item builder-first--footer_copyright" data-push-left="_sm-0"><div class="item--inner builder-item--footer_copyright" data-section="footer_copyright" data-item-id="footer_copyright" ><div class="builder-footer-copyright-item footer-copyright"><p>Copyright &copy; 2021  &#8211; Powered by Banksalad.</p>
+</div></div></div></div>									</div>
+								</div>
+							</div>
+							</footer></div><!-- #page -->
+
+<script type='text/javascript'>Kakao.init('');</script>
+	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})()
+	</script>
+	<script type='text/javascript' src='../wp-content/plugins/jetpack/_inc/build/photon/photon.min1c52.js?ver=20191001' id='jetpack-photon-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70' id='jquery-blockui-js'></script>
+<script type='text/javascript' id='wc-add-to-cart-js-extra'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"\uc7a5\ubc14\uad6c\ub2c8 \ubcf4\uae30","cart_url":"https:\/\/fxtradeonline.net\/","is_cart":"","cart_redirect_after_add":"yes"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min1c9b.js?ver=4.6.1' id='wc-add-to-cart-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4' id='js-cookie-js'></script>
+<script type='text/javascript' id='woocommerce-js-extra'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","qty_pm":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min1c9b.js?ver=4.6.1' id='woocommerce-js'></script>
+<script type='text/javascript' id='wc-cart-fragments-js-extra'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_7ee8e087713981d84a225226aeb4740f","fragment_name":"wc_fragments_7ee8e087713981d84a225226aeb4740f","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min1c9b.js?ver=4.6.1' id='wc-cart-fragments-js'></script>
+<script type='text/javascript' id='wc-cart-fragments-js-after'>
+		jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			var jetpackLazyImagesLoadEvent;
+			try {
+				jetpackLazyImagesLoadEvent = new Event( 'jetpack-lazy-images-load', {
+					bubbles: true,
+					cancelable: true
+				} );
+			} catch ( e ) {
+				jetpackLazyImagesLoadEvent = document.createEvent( 'Event' )
+				jetpackLazyImagesLoadEvent.initEvent( 'jetpack-lazy-images-load', true, true );
+			}
+			jQuery( 'body' ).get( 0 ).dispatchEvent( jetpackLazyImagesLoadEvent );
+		} );
+	
+</script>
+<script type='text/javascript' id='customify-themejs-js-extra'>
+/* <![CDATA[ */
+var Customify_JS = {"is_rtl":"","css_media_queries":{"all":"%s","desktop":"%s","tablet":"@media screen and (max-width: 1024px) { %s }","mobile":"@media screen and (max-width: 568px) { %s }"},"sidebar_menu_no_duplicator":"1","wc_open_cart":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/themes/customify/assets/js/theme.min70a1.js?ver=0.3.5' id='customify-themejs-js'></script>
+<script type='text/javascript' src='../wp-content/themes/customify/assets/js/compatibility/woocommerce.min70a1.js?ver=0.3.5' id='plugin-woocommerce-js'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min40df.js?ver=5.6' id='wp-embed-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/elementor/assets/js/frontend-modules.mine9bd.js?ver=3.0.12' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/ui/core.min35d0.js?ver=1.12.1' id='jquery-ui-core-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/elementor/assets/lib/dialog/dialog.mina288.js?ver=4.8.1' id='elementor-dialog-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/elementor/assets/lib/swiper/swiper.min48f5.js?ver=5.3.6' id='swiper-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/elementor/assets/lib/share-link/share-link.mine9bd.js?ver=3.0.12' id='share-link-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"\ud398\uc774\uc2a4\ubd81 \uacf5\uc720","shareOnTwitter":"\ud2b8\uc704\ud130 \uacf5\uc720","pinIt":"\uace0\uc815\ud558\uae30","download":"Download","downloadImage":"\uc774\ubbf8\uc9c0 \ub2e4\uc6b4\ub85c\ub4dc","fullscreen":"\uc804\uccb4\ud654\uba74","zoom":"\uc90c","share":"\uacf5\uc720","playVideo":"\ube44\ub514\uc624 \uc7ac\uc0dd","previous":"\uc774\uc804","next":"\ub2e4\uc74c","close":"\ub2eb\uae30"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.12","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/fxtradeonline.net\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":1893,"title":"Test%20Setup","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='../wp-content/plugins/elementor/assets/js/frontend.mine9bd.js?ver=3.0.12' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='../wp-includes/js/underscore.min4511.js?ver=1.8.3' id='underscore-js'></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-includes/js/wp-util.min40df.js?ver=5.6' id='wp-util-js'></script>
+<script type='text/javascript' id='wpforms-elementor-js-extra'>
+/* <![CDATA[ */
+var wpformsElementorVars = {"recaptcha_type":"v2"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.minbb89.js?ver=1.6.3.1' id='wpforms-elementor-js'></script>
+<script type='text/javascript' src='../../stats.wp.com/e-202101.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.0.2',blog:'180742285',post:'1893',tz:'0',srv:'fxtradeonline.net'} ]);
+	_stq.push([ 'clickTrackerInit', '180742285', '1893' ]);
+</script>
+
+</body>
+
+<!-- Mirrored from fxtradeonline.net/banksalad-apptestautomation/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 09 Jan 2021 16:09:18 GMT -->
+</html>
+
+<!--Generated by Endurance Page Cache-->
